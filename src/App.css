@@ -1,0 +1,182 @@
+.App {
+  margin: auto;
+  width: 100%;
+  max-width: 30rem;
+}
+
+h5 {
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+  padding-top: 0.25rem;
+}
+
+.categories > button {
+  border-radius: 0;
+  background: #c3c3c3;
+  color: #1a1a1a;
+  font-weight: bold;
+  border: none;
+  border-top: black solid 0.1rem;
+  border-bottom: black solid 0.1rem;
+  border-left: black solid 0.1rem;
+  cursor: pointer;
+  width: 20%;
+  height: 2rem;
+}
+
+.categories > button:focus {
+  outline: none;
+}
+
+.categories > button.selected {
+  background: pink;
+}
+
+.categories > button:hover {
+  filter: brightness(1.2);
+}
+
+.categories > button:last-of-type {
+  border-radius: 0 0.25rem 00 0;
+  border-right: black solid 0.1rem;
+}
+
+.categories > button:first-of-type {
+  border-radius: 0.25rem 0 0 0;
+}
+
+.tasks {
+  border-radius: 0.5rem;
+  border: grey solid 0.1rem;
+  border-top: none;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.tasks .task {
+  background: #ffffff99;
+  border: grey solid 0.1rem;
+  border-bottom: none;
+  padding: 0.25rem 1rem 0.25rem 0.25rem;
+  display: flex;
+}
+
+.tasks .task:first-of-type {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.tasks .task:last-of-type {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom: grey solid 0.1rem;
+}
+
+.tasks .task > .text {
+  line-height: 1.5rem;
+  padding-left: 0.25rem;
+}
+
+.tasks .task > .label {
+  background: lightcyan;
+  color: blue;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  border: solid #cbcbff 0.15rem;
+  border-radius: 0.25rem;
+}
+
+.tasks .task > button.delete {
+  margin-left: auto;
+  border-radius: 0.5rem;
+  background: #ffe9ed;
+  color: #ff7d7d;
+  font-weight: bolder;
+  font-size: 1rem;
+  border: solid #ffb1b1 0.1rem;
+  cursor: pointer;
+}
+
+.tasks .task > button.delete:hover {
+  filter: brightness(1.1);
+}
+
+.new-task-form {
+  border: solid #8989ff 0.1rem;
+  height: 2rem;
+  display: flex;
+}
+
+.new-task-form > input[type="text"] {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.new-task-form > input[type="submit"] {
+  background: #6363ff;
+  color: white;
+  border: none;
+  height: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 7rem;
+}
+
+.new-task-form > select {
+  width: 7rem;
+  height: 100%;
+  padding-left: 1rem;
+}
+
+.new-task-form > input[type="submit"]:hover {
+  filter: brightness(1.2)
+}
+
+button.toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #d2d6d9;
+  color: #494949;
+  border: solid #a0a0a0 0.1rem;
+}
+
+button.toggle.on {
+  background: #d3edff;
+  color: #0798ff;
+  border: solid #0798ff 0.1rem;
+}
+
+button.toggle.on:before {
+  content: '';
+  background: #d3edff;
+  position: absolute;
+  transform-origin: center;
+  transform: scale(0);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  animation: grow 0.75s;
+}
+
+button.toggle:focus {
+  outline: none;
+}
+
+@keyframes grow {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
