@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { CATEGORIES, TASKS } from "../data";
 
-function App() {
-  const [tasks, setTasks] = useState(TASKS);
+console.log({ CATEGORIES, TASKS });
 
+function App() {
   return (
     <div className="App">
       <h2>My tasks</h2>
