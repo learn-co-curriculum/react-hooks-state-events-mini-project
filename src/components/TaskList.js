@@ -1,8 +1,7 @@
 import React from "react";
-import Task from "./Task";
 
 function TaskList() {
-  return <div>{/* display tasks using Task component */}</div>;
+  return <div>{/* display a list of tasks using Task component */}</div>;
 }
 
 export default TaskList;
