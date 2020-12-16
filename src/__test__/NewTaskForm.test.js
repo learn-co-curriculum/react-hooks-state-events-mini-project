@@ -1,11 +1,14 @@
 import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
 import NewTaskForm from "../components/NewTaskForm";
+import { CATEGORIES } from "../data";
 import App from "../components/App";
 
 test("calls the onTaskFormSubmit callback prop when the form is submitted", () => {
   const onTaskFormSubmit = jest.fn();
-  render(<NewTaskForm onTaskFormSubmit={onTaskFormSubmit} />);
+  render(
+    <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={onTaskFormSubmit} />
+  );
 
   fireEvent.change(screen.queryByLabelText(/Details/), {
     target: { value: "Pass the tests" },

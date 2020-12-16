@@ -12,21 +12,21 @@ test("displays a button for each category", () => {
 });
 
 test("clicking the category button adds a class of 'selected' to the button", () => {
-  render(<CategoryFilter categories={CATEGORIES} />);
+  render(<App />);
 
-  const codeButton = screen.queryByText("Code");
-  const allButton = screen.queryByText("All");
+  const codeButton = screen.queryByRole("button", { name: "Code" });
+  const allButton = screen.queryByRole("button", { name: "All" });
 
   fireEvent.click(codeButton);
 
-  expect(codeButton.classList).toInclude("selected");
-  expect(allButton.classList).not.toInclude("selected");
+  expect(codeButton.classList).toContain("selected");
+  expect(allButton.classList).not.toContain("selected");
 });
 
 test("clicking the category button filters the task list", () => {
   render(<App />);
 
-  const codeButton = screen.queryByText("Code");
+  const codeButton = screen.queryByRole("button", { name: "Code" });
 
   fireEvent.click(codeButton);
 
@@ -37,7 +37,7 @@ test("clicking the category button filters the task list", () => {
 test("displays all tasks when the 'All' button is clicked", () => {
   render(<App />);
 
-  const allButton = screen.queryByText("All");
+  const allButton = screen.queryByRole("button", { name: "All" });
 
   fireEvent.click(allButton);
 
