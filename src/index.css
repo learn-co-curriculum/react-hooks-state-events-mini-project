@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: linear-gradient(#f7efef, #e6dcdc);
   min-height: 100vh;
@@ -15,7 +21,7 @@ code {
 }
 
 .App {
-  margin: auto;
+  margin: 4rem auto;
   width: 100%;
   max-width: 30rem;
 }
@@ -26,7 +32,7 @@ h5 {
   padding-top: 0.25rem;
 }
 
-.categories > button {
+.categories button {
   border-radius: 0;
   background: #c3c3c3;
   color: #1a1a1a;
@@ -40,24 +46,24 @@ h5 {
   height: 2rem;
 }
 
-.categories > button:focus {
+.categories button:focus {
   outline: none;
 }
 
-.categories > button.selected {
+.categories button.selected {
   background: pink;
 }
 
-.categories > button:hover {
+.categories button:hover {
   filter: brightness(1.2);
 }
 
-.categories > button:last-of-type {
+.categories button:last-of-type {
   border-radius: 0 0.25rem 00 0;
   border-right: black solid 0.1rem;
 }
 
-.categories > button:first-of-type {
+.categories button:first-of-type {
   border-radius: 0.25rem 0 0 0;
 }
 
@@ -88,12 +94,12 @@ h5 {
   border-bottom: grey solid 0.1rem;
 }
 
-.tasks .task > .text {
+.tasks .task .text {
   line-height: 1.5rem;
   padding-left: 0.25rem;
 }
 
-.tasks .task > .label {
+.tasks .task .label {
   background: lightcyan;
   color: blue;
   padding: 0.25rem;
@@ -102,7 +108,8 @@ h5 {
   border-radius: 0.25rem;
 }
 
-.tasks .task > button.delete {
+.tasks .task button.delete {
+  padding: 0 0.5rem;
   margin-left: auto;
   border-radius: 0.5rem;
   background: #ffe9ed;
@@ -113,41 +120,34 @@ h5 {
   cursor: pointer;
 }
 
-.tasks .task > button.delete:hover {
+.tasks .task button.delete:hover {
   filter: brightness(1.1);
 }
 
 .new-task-form {
   border: solid #8989ff 0.1rem;
-  height: 2rem;
   display: flex;
+  align-items: flex-end;
 }
 
-.new-task-form > input[type="text"] {
-  font-size: 1.5rem;
-  line-height: 1rem;
-  width: 100%;
-  box-sizing: border-box;
+.new-task-form input[type="text"] {
 }
 
-.new-task-form > input[type="submit"] {
+.new-task-form input[type="submit"] {
   background: #6363ff;
   color: white;
   border: none;
-  height: 100%;
   font-size: 1rem;
   cursor: pointer;
   box-sizing: border-box;
   width: 7rem;
 }
 
-.new-task-form > select {
+.new-task-form select {
   width: 7rem;
-  height: 100%;
-  padding-left: 1rem;
 }
 
-.new-task-form > input[type="submit"]:hover {
+.new-task-form input[type="submit"]:hover {
   filter: brightness(1.2);
 }
 
