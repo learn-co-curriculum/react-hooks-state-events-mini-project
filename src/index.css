@@ -130,9 +130,6 @@ h5 {
   align-items: flex-end;
 }
 
-.new-task-form input[type="text"] {
-}
-
 .new-task-form input[type="submit"] {
   background: #6363ff;
   color: white;
