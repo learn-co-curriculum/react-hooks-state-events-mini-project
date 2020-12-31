@@ -16,17 +16,23 @@ need down from `App`.
 
 ### TaskList
 
-First, we'll want to display all the tasks in our app. Display each task using
-the `Task` component. Make sure to use a `key` prop!
+First, we'll want to display all the tasks in our app. Pass down the task data
+from `App` to `TaskList`, and display each task using the `Task` component. Make
+sure to use a `key` prop!
 
-You should also update the `Task` component so that it shows the text and
-category its task.
+### Task
+
+Update the `Task` component so that it shows the text and category for its task.
+
+_When the delete button is clicked_, the task should be removed from the list.
 
 ### CategoryFilter
 
-First, update this component to display `<button>` elements for each category
-(again, make sure to use a key prop). _When the button is clicked_, the
-following should happen:
+Pass the list of categories to this component from `App`. Then, update this
+component to display `<button>` elements for each category (again, make sure to
+use a key prop).
+
+_When a button is clicked_, the following should happen:
 
 - Whichever button was clicked should have a class of `selected`. The other
   buttons should not have any class assigned.
@@ -36,9 +42,10 @@ following should happen:
 
 ### NewTaskForm
 
-First, update this component to display `<option>` elements for each category
-inside of the `<select>` element, so that the user can select a category when
-adding a new task.
+Pass the list of categories to this component from `App`. Then, update this
+component to display `<option>` elements for each category inside of the
+`<select>` element **except** the "All" category, so that the user can select a
+category when adding a new task.
 
 Next, update this form to be a _controlled component_, so that all form inputs
 are captured in state.
@@ -46,7 +53,3 @@ are captured in state.
 _When the form is submitted_, add a new task to the list with the text and
 category from the form. You'll need a callback prop named `onTaskFormSubmit` for
 the tests to pass for this feature.
-
-### Task
-
-_When the delete button is clicked_, remove the task from the list!
