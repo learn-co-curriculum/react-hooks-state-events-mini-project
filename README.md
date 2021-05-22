@@ -1,4 +1,11 @@
-# State and Events Mini Project
+# Putting it All Together: State and Events
+
+## Learning Goals
+
+- Use state and events to make components dynamic
+- Implement controlled components
+
+## Overview
 
 To build on what you've learned over the course of this section, we'll be
 building out a simple task list app to practice working with state and events,
