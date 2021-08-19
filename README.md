@@ -5,7 +5,7 @@
 - Use state and events to make components dynamic
 - Implement controlled components
 
-## Overview
+## Introduction
 
 To build on what you've learned over the course of this section, we'll be
 building out a simple task list app to practice working with state and events,
@@ -19,7 +19,7 @@ down to the components that need it as props.
 
 Run `npm install` and `npm start`, then check out the starter code in the
 browser. You'll see a console message with the `TASK` and `CATEGORY` data you'll
-need down from `App`.
+need to pass down from `App`.
 
 ### TaskList
 
@@ -29,7 +29,7 @@ sure to use a `key` prop!
 
 ### Task
 
-Update the `Task` component so that it shows the text and category for its task.
+Update the `Task` component so that it shows the task's text and category.
 
 _When the delete button is clicked_, the task should be removed from the list.
 
