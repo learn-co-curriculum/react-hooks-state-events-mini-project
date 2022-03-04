@@ -58,5 +58,5 @@ Next, update this form to be a _controlled component_, so that all form inputs
 are captured in state.
 
 _When the form is submitted_, add a new task to the list with the text and
-category from the form. You'll need a callback prop named `onTaskFormSubmit` for
-the tests to pass for this feature.
+category from the form. For the tests for this feature to pass, you'll need a
+callback prop named `onTaskFormSubmit` that takes a task object as an argument.
