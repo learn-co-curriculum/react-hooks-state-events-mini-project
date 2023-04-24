@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} selectedCategory={selectedCategory} onSelectCategory={handleSelectCategory}/>
-      <NewTaskForm />
+      <NewTaskForm  categories={CATEGORIES} onTaskFormSubmit={handleTaskFormSubmit}/>
       <TaskList tasks={tasks} onDelete={handleDelete} />
     </div>
   );
